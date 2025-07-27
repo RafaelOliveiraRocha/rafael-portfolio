@@ -1,0 +1,99 @@
+{
+  "relatorio": [
+    {
+      "Mês": "janeiro",
+      "2024": "-",
+      "2025": 10
+    },
+    {
+      "Mês": "fevereiro",
+      "2024": "-",
+      "2025": 13
+    },
+    {
+      "Mês": "março",
+      "2024": 9,
+      "2025": 9
+    },
+    {
+      "Mês": "abril",
+      "2024": 9,
+      "2025": 8
+    },
+    {
+      "Mês": "maio",
+      "2024": 18,
+      "2025": 2
+    },
+    {
+      "Mês": "junho",
+      "2024": 11,
+      "2025": 4
+    },
+    {
+      "Mês": "julho",
+      "2024": 7,
+      "2025": 8
+    },
+    {
+      "Mês": "agosto",
+      "2024": 2,
+      "2025": "-"
+    },
+    {
+      "Mês": "setembro",
+      "2024": 7,
+      "2025": "-"
+    },
+    {
+      "Mês": "outubro",
+      "2024": 12,
+      "2025": "-"
+    },
+    {
+      "Mês": "novembro",
+      "2024": 11,
+      "2025": "-"
+    },
+    {
+      "Mês": "dezembro",
+      "2024": 4,
+      "2025": "-"
+    }
+  ],
+  "acumulado": [
+    { "Mês": "MAR/24", "Acumulado": 9 },
+    { "Mês": "ABR/24", "Acumulado": 18 },
+    { "Mês": "MAI/24", "Acumulado": 36 },
+    { "Mês": "JUN/24", "Acumulado": 47 },
+    { "Mês": "JUL/24", "Acumulado": 54 },
+    { "Mês": "AGO/24", "Acumulado": 56 },
+    { "Mês": "SET/24", "Acumulado": 63 },
+    { "Mês": "OUT/24", "Acumulado": 75 },
+    { "Mês": "NOV/24", "Acumulado": 86 },
+    { "Mês": "DEZ/24", "Acumulado": 90 },
+    { "Mês": "JAN/25", "Acumulado": 100 },
+    { "Mês": "FEV/25", "Acumulado": 113 },
+    { "Mês": "MAR/25", "Acumulado": 122 },
+    { "Mês": "ABR/25", "Acumulado": 130 },
+    { "Mês": "MAI/25", "Acumulado": 132 },
+    { "Mês": "JUN/25", "Acumulado": 136 },
+    { "Mês": "JUL/25", "Acumulado": 144 }
+  ],
+  "dashbi": [
+    {
+      "Total Contas Atendidas": 37,
+      "Serviços": "Manutenções e criação de Dashboards para acompanhamento de métricas do Bot, Chat, HSM e Inbox"
+    }
+  ],
+  "automacao": [
+    {
+      "Automações": 1,
+      "Serviços": "Bot Analytics"
+    },
+    {
+      "Automações": 1,
+      "Serviços": "Chat Analytics"
+    }
+  ]
+}

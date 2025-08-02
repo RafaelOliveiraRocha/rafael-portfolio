@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Play } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { Badge } from '@/components/ui/badge.jsx';
 
 const Projects = () => {
@@ -16,8 +16,6 @@ const Projects = () => {
       status: 'Ativo',
       technologies: ['Python', 'Selenium', 'API REST', 'SQL'],
       github: 'https://github.com/RafaelOliveiraRocha/bot_analysis_ofc',
-      demo: 'https://hi-serviceshub.replit.app/bot_analytics/upload?session_id=3d6c2e4c-5bb7-44fa-bf08-ae953b770b72',
-      demoType: 'link',
     },
     {
       id: 2,
@@ -28,8 +26,6 @@ const Projects = () => {
       status: 'Ativo',
       technologies: ['JavaScript', 'Node.js', 'WhatsApp API', 'React'],
       github: 'https://github.com/RafaelOliveiraRocha/zapcannon',
-      demo: 'https://www.linkedin.com/posts/rafael-rocha-89271021b_zapcannon-python-flask-activity-7086785967956647936-PALk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADd02e4BIZ7BT-kyc1blXctRBMvW9C9ON4Y',
-      demoType: 'linkedin',
     },
     {
       id: 3,
@@ -40,8 +36,6 @@ const Projects = () => {
       status: 'Ativo',
       technologies: ['Python', 'Django', 'PostgreSQL', 'Chart.js'],
       github: 'https://github.com/RafaelOliveiraRocha/captura-leads',
-      demo: 'https://www.linkedin.com/posts/rafael-rocha-89271021b_automaaexaetoweb-python-dashboard-activity-7132378993277714432-nq0u?utm_source=share&utm_medium=member_desktop&rcm=ACoAADd02e4BIZ7BT-kyc1blXctRBMvW9C9ON4Y',
-      demoType: 'linkedin',
     },
   ];
 
@@ -110,52 +104,54 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="cyber-border rounded-lg bg-card/30 backdrop-blur-sm overflow-hidden group"
+                className="cyber-border rounded-lg bg-card/30 backdrop-blur-sm overflow-hidden group flex flex-col justify-between"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
               >
                 {/* Project Header */}
-                <div className="p-6 border-b border-muted/20">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge
-                      variant="outline"
-                      className={getCategoryColor(project.category)}
-                    >
-                      {project.category}
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className={getStatusColor(project.status)}
-                    >
-                      {project.status}
-                    </Badge>
-                  </div>
-
-                  <h3 className="text-xl font-orbitron font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
+                <div>
+                  <div className="p-6 border-b border-muted/20">
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge
+                        variant="outline"
+                        className={getCategoryColor(project.category)}
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        {project.category}
+                      </Badge>
+                      <Badge
+                        variant="outline"
+                        className={getStatusColor(project.status)}
+                      >
+                        {project.status}
+                      </Badge>
+                    </div>
+
+                    <h3 className="text-xl font-orbitron font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                {/* Project Actions */}
-                <div className="p-6 space-y-3">
+                {/* Botão GitHub fixo no final */}
+                <div className="p-6">
                   <motion.a
                     href={project.github}
                     target="_blank"
@@ -167,76 +163,7 @@ const Projects = () => {
                     <Github className="w-4 h-4 group-hover:animate-pulse" />
                     <span className="font-mono text-sm">GitHub</span>
                   </motion.a>
-
-                  {project.demoType === 'link' ? (
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="neon-btn group flex items-center justify-center space-x-2 w-full"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <ExternalLink className="w-4 h-4 group-hover:animate-pulse" />
-                      <span className="font-mono text-sm">Executar Online</span>
-                    </motion.a>
-                  ) : (
-                    <motion.button
-                      onClick={() => {
-                        const modal = document.getElementById(
-                          `modal-${project.id}`,
-                        );
-                        modal.style.display = 'flex';
-                      }}
-                      className="neon-btn group flex items-center justify-center space-x-2 w-full"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Play className="w-4 h-4 group-hover:animate-pulse" />
-                      <span className="font-mono text-sm">Demo</span>
-                    </motion.button>
-                  )}
                 </div>
-
-                {/* Video Modal */}
-                {project.demoType === 'embed' && (
-                  <div
-                    id={`modal-${project.id}`}
-                    className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4"
-                    onClick={(e) => {
-                      if (e.target.id === `modal-${project.id}`) {
-                        e.target.style.display = 'none';
-                      }
-                    }}
-                  >
-                    <div className="bg-card rounded-lg p-6 max-w-2xl w-full max-h-[80vh] overflow-auto">
-                      <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-xl font-orbitron font-bold text-white">
-                          {project.title} - Demo
-                        </h3>
-                        <button
-                          onClick={() => {
-                            document.getElementById(
-                              `modal-${project.id}`,
-                            ).style.display = 'none';
-                          }}
-                          className="text-muted-foreground hover:text-white text-2xl"
-                        >
-                          ×
-                        </button>
-                      </div>
-                      <iframe
-                        src={project.demo}
-                        height="399"
-                        width="100%"
-                        frameBorder="0"
-                        allowFullScreen
-                        title={`${project.title} Demo`}
-                        className="rounded-lg"
-                      />
-                    </div>
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>

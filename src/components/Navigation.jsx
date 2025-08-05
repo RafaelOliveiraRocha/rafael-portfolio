@@ -10,6 +10,7 @@ import {
   MessageSquare,
   Menu,
   X,
+  GraduationCap,
 } from 'lucide-react';
 
 export const Navigation = () => {
@@ -29,7 +30,7 @@ export const Navigation = () => {
   const menuItems = [
     { path: '/', label: 'Início', icon: Terminal },
     { path: '/sobre', label: 'Sobre', icon: User },
-    { path: '/formacao', label: 'Formação', icon: User },
+    { path: '/formacao', label: 'Formação', icon: GraduationCap },
     { path: '/projetos', label: 'Projetos', icon: FolderOpen },
     { path: '/skills', label: 'Skills', icon: Code },
     { path: '/dashboard', label: 'Dashboard', icon: TrendingUp },

@@ -1,13 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Navigation } from './components/Navigation'
-import { ParticleBackground } from './components/ParticleBackground'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Skills from './pages/Skills'
-import Dashboard from './pages/Dashboard'
-import Contact from './pages/Contact'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navigation } from './components/Navigation';
+import { ParticleBackground } from './components/ParticleBackground';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Dashboard from './pages/Dashboard';
+import Contact from './pages/Contact';
+import './App.css';
+import Formacao from './pages/Formacao';
 
 function App() {
   return (
@@ -22,11 +23,11 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/formacao" element={<Formacao />} />
         </Routes>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
-
+export default App;

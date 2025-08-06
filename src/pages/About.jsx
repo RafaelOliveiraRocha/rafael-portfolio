@@ -19,8 +19,8 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-orbitron font-bold text-center mb-16 text-primary glow-text">
-            &gt; whoami
+          <h1 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-6 md:mb-12 text-primary glow-text">
+            &gt; whoami()
           </h1>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -250,7 +250,7 @@ const About = () => {
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 text-sm md:text-base leading-relaxed">
                 No AppJusto, atuei como Assistente de Operações, garantindo o
                 funcionamento da plataforma em tempo real e prestando suporte a
                 consumidores, entregadores e restaurantes. Durante esse período,

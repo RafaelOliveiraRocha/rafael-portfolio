@@ -80,7 +80,7 @@ const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-orbitron font-bold text-center mb-8 text-primary glow-text">
+          <h1 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-6 md:mb-12 text-primary glow-text">
             &gt; dashboard.analytics()
           </h1>
 

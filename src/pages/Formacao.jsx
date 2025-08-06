@@ -60,7 +60,7 @@ const Formacao = () => {
                 <img
                   src={formacoes[0].imagem}
                   alt={formacoes[0].titulo}
-                  className="rounded-lg border border-muted/20 mb-3 max-w-md mx-auto"
+                  className="rounded-lg border border-muted/20 mb-3 max-w-xs md:max-w-md w-full mx-auto"
                 />
 
                 <p className="text-sm text-muted-foreground text-center">
@@ -113,7 +113,7 @@ const Formacao = () => {
                 <img
                   src={formacoes[1].imagem}
                   alt={formacoes[1].titulo}
-                  className="rounded-lg border border-muted/20 mb-3 max-w-md mx-auto"
+                  className="rounded-lg border border-muted/20 mb-3 max-w-xs md:max-w-md w-full mx-auto"
                 />
 
                 <p className="text-sm text-muted-foreground text-center">

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { ParticleBackground } from './components/ParticleBackground';
+import ScrollToTop from './components/scrollToTop'; // ⬅️ novo import
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -13,6 +14,7 @@ import Formacao from './pages/Formacao';
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ⬅️ novo componente */}
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <ParticleBackground />
         <Navigation />
